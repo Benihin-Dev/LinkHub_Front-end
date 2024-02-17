@@ -155,9 +155,9 @@ export default function PaidUser() {
                     {PaidUserData.username}
                   </h1>
                   <div
-                    className={`px-5 ml-4 border ${copyboardcolour} rounded-lg py-1`}
+                    className={`px-5 ml-4 ${copyboardcolour} rounded-lg py-1`}
                     onClick={() => {
-                      const linkToCopy = `http://localhost:8080/paidUserData/${PaidUserData.username}`;
+                      const linkToCopy = `${PaidUserData.username}`;
                       clipboardy
                         .write(linkToCopy)
                         .then(() => {
@@ -550,9 +550,9 @@ export default function PaidUser() {
                     {PaidUserData.username}
                   </h1>
                   <div
-                    className={`px-3 ml-4 border ${copyboardcolour} rounded-lg py-1`}
+                    className={`px-3 ml-4 ${copyboardcolour} rounded-lg py-1`}
                     onClick={() => {
-                      const linkToCopy = `http://localhost:8080/paidUserData/${PaidUserData.username}`;
+                      const linkToCopy = `${PaidUserData.username}`;
                       clipboardy
                         .write(linkToCopy)
                         .then(() => {
