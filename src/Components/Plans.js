@@ -8,7 +8,7 @@ export default function Plans() {
   return (
     <div
       id="plans"
-      className="font-Sriracha sm:h-60 md:h-[280px] lg:h-72 mb-24 sm:flex mx-3 border border-[#55ceb6] bg-[#cefff553] w-full sm:w-11/12 lg:w-4/5 sm:mx-auto mt-20"
+      className="font-Sriracha sm:h-60 md:h-[280px] lg:h-72 mb-24 sm:flex border border-[#55ceb6] bg-[#cefff553] w-full sm:w-11/12 lg:w-4/5 sm:mx-auto mt-20"
     >
       <div className=" sm:w-5/12 p-6 text-sm  w-10/12 mx-auto md:text-sm lg:text-base lg:p-8 leading-4 flex  items-end">
         <p className="text-slate-600 ">
@@ -20,7 +20,7 @@ export default function Plans() {
         </p>
       </div>
       <div className="sm:w-7/12 sm:flex mx-6 sm:mx-10 sm:mb-1 lg:mx-16 gap-10 lg:gap-10">
-        <div className="bg-[#ffffffd2] border  w-2/4 mx-auto border-gray-500 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
+        <div className="bg-[#ffffffd2] border  w-3/5 mx-auto border-gray-400 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
           <h1 className=" mt-3 text-center mx-3 border-b border-green-300 pb-2">
             BASIC
           </h1>
@@ -44,7 +44,7 @@ export default function Plans() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ffffffd2] w-1/2 mx-auto border border-gray-500 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
+        <div className="bg-[#ffffffd2] w-3/5 mx-auto border border-gray-400 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
           <h1 className=" mt-3 text-center  mx-3 border-b border-green-300 pb-2">
             STANDART
           </h1>

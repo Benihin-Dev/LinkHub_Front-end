@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
 import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
@@ -33,9 +33,11 @@ export default function GuestLinkShow() {
     <>
       <NavBar />
 
-      <div className={`${
+      <div
+        className={`${
           isMounted ? "slide-in" : ""
-        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 `}>
+        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 `}
+      >
         <div className="sm:w-5/12 w-11/12 mx-auto sm:ml-1  flex justify-center items-end mb-5 ">
           <div className=" ">
             <div className="mr-5 sm:mx-5">
@@ -61,7 +63,7 @@ export default function GuestLinkShow() {
           </div>
         </div>
 
-        <div className="sm:w-7/12 lg:w-6/12 sm:mx-8 mt-4 sm:mt-10 border-[#f4f2f2c9] bg-cover bg-center showlinkimage md:mx-5">
+        <div className="sm:w-7/12 lg:w-6/12 sm:mx-8 mt-4 sm:mt-10 border-[#f4f2f2c9] h-96 bg-cover bg-center showlinkimage md:mx-5">
           <div className=" h-96 py-5 pl-5 bg-red-50 w-8/12 border">
             <div className="mb-3">
               <h3 className=" text-base text-slate-600">
