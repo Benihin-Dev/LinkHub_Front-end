@@ -7,6 +7,7 @@ import Guest from "./Components/GuestUser";
 import PaidUser from "./Components/PaidUser";
 import PaidUserLinkShow from "./Components/PaidUserLinkShow";
 import GuestLinkShow from "./Components/GuestLinkShow";
+import About from "./Components/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/paid-user" element={<PaidUser />} />
           <Route path="/paid-user-link-show" element={<PaidUserLinkShow />} />
           <Route path="/guest-link-show" element={<GuestLinkShow />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </>
     </Router>

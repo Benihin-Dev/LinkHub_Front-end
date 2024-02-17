@@ -16,7 +16,7 @@ export default function Contact() {
   const HandleSubmit = async (event) => {
     event.preventDefault();
     try {
-      setLoading(true)
+      setLoading(true);
       console.log(formData);
       const response = await axios.post(
         "https://linkhub-datatransfer-apiservice.onrender.com/userCommentsData",
@@ -25,7 +25,7 @@ export default function Contact() {
 
       if (response.status === 200) {
         // console.log("Data submitted successfully!", response.data);
-        setLoading(false)
+        setLoading(false);
         setThanksMessage(" Thank You for your Comment.");
         formRef.current.reset();
         setTimeout(() => {
@@ -33,12 +33,11 @@ export default function Contact() {
         }, 2800);
       } else {
         // console.error("Error submitting data:", response.statusText);
-        setLoading(false)
-
+        setLoading(false);
       }
     } catch (error) {
       console.error("Error:", error);
-      setLoading(false)
+      setLoading(false);
     }
   };
 
@@ -56,9 +55,16 @@ export default function Contact() {
       className=" font-Sriracha sm:h-72 md:h-80 mx-auto sm:flex md:w-11/12  lg:w-4/5 sm:mx-5 md:mx-auto mb-10 sm:mb-32"
     >
       <div className="sm:w-2/3 mx-0 w-11/12 relative">
-        <h1 className="mx-5 h-2 text-orange-400">{thanksMessage}</h1>
-        <form ref={formRef} action="#" onSubmit={HandleSubmit}>
-          <h1 className="mx-5 mb-2   sm:mt-4 sm:mb-2 text-[#088395]">
+        <h1 className=" absolute top-[65%] left-[20%]  h-20 z-10 text-orange-400">
+          {thanksMessage}
+        </h1>
+        <form
+          ref={formRef}
+          action="#"
+          onSubmit={HandleSubmit}
+          className={`${loading === true ? "blur" : "blur-none"}`}
+        >
+          <h1 className="mx-5 mb-2 text-xl sm:mt-4 sm:mb-2 text-[#088395]">
             Sent a message
           </h1>
 
@@ -69,7 +75,7 @@ export default function Contact() {
             placeholder="Enter name"
             required
             onChange={handleChange}
-            className=" border outline-none py-1 mb-3 text-sm border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
+            className=" border outline-none py-1 mb-3 text-base border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
           />
 
           <input
@@ -79,7 +85,7 @@ export default function Contact() {
             placeholder="Email"
             required
             onChange={handleChange}
-            className=" border outline-none py-1 mb-3 text-sm border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
+            className=" border outline-none py-1 mb-3 text-base border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
           />
           <input
             type="text"
@@ -88,7 +94,7 @@ export default function Contact() {
             placeholder="Subject"
             required
             onChange={handleChange}
-            className="  border outline-none py-1 mb-3 text-sm border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
+            className="  border outline-none py-1 mb-3 text-base border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
           />
           <textarea
             type="text"
@@ -98,12 +104,12 @@ export default function Contact() {
             onChange={handleChange}
             rows={4}
             required
-            className="resize-none border outline-none py-2 mb-3 text-sm MessageBox border-[#00ffca] rounded-3xl px-3 mx-4 w-full sm:w-4/5"
+            className="resize-none border outline-none py-2 mb-3 text-base MessageBox border-[#00ffca] rounded-3xl px-3 mx-4 w-full sm:w-4/5"
           />
           <input
             type="submit"
             value="Submit"
-            className=" bg-[#00ffcc30] hover:bg-[#00ffca]  border outline-none py-1 mb-3 text-sm border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
+            className=" bg-[#00ffcc30] hover:bg-[#00ffca]  border outline-none py-1 mb-3 text-base border-[#00ffca] rounded-full px-3 mx-4 w-full sm:w-4/5"
           />
         </form>
         <div

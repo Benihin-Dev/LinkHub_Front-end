@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import checkmarkf from "../image/check-markf.png";
 import checkmarkf1 from "../image/check-mark2.png";
 import checkmarkf2 from "../image/close.png";
 import PlansImg from "../image/PlansImg.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useFetcher } from "react-router-dom";
 
 export default function AccountSelection() {
+  const [isMounted, setIsMounted] = useState(false);
+  let timeoutId = null;
+
+  useEffect(() => {
+    timeoutId = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <>
       <NavBar />
-      <div className="md:flex sm:w-11/12 lg:w-4/5 mx-auto pt-28 mb-16">
+      <div
+        className={`${
+          isMounted ? "slide-in" : ""
+        } opacity-0 md:flex sm:w-11/12 lg:w-4/5 mx-auto pt-28 mb-16`}
+      >
         <div className=" font-Sriracha w-11/12 md:w-3/5 mx-auto pt-5">
           <h1 className="text-center mb-5 md:mb-0 text-lg text-slate-600 border-b mx-10">
             Account Plans
@@ -43,7 +58,7 @@ export default function AccountSelection() {
             </div>
 
             <div className="bg-[#00ffcc0c] hover:bg-[#00ffcc1f] border border-[#00ffca] rounded-lg  w-1/2 sm:my-6 md:my-10 mb-6 sm:mb-0">
-              <NavLink to="/account-create" >
+              <NavLink to="/account-create">
                 <h1 className=" mt-3 text-center mx-3 border-b border-white pb-2">
                   STANDART
                 </h1>

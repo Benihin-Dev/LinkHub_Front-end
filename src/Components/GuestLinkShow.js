@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import { ReactTyped } from "react-typed";
 import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
@@ -17,12 +18,25 @@ export default function GuestLinkShow() {
   const receivedData = location.state;
   let GuestUserData = receivedData.fetchedGuestUserData;
 
+  const [isMounted, setIsMounted] = useState(false);
+  let timeoutId = null;
+
+  useEffect(() => {
+    timeoutId = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <>
       <NavBar />
 
-      <div className="font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 ">
-        <div className="sm:w-5/12 sm:ml-1  flex justify-center items-end mb-5 ">
+      <div className={`${
+          isMounted ? "slide-in" : ""
+        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 `}>
+        <div className="sm:w-5/12 w-11/12 mx-auto sm:ml-1  flex justify-center items-end mb-5 ">
           <div className=" ">
             <div className="mr-5 sm:mx-5">
               <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
@@ -32,11 +46,16 @@ export default function GuestLinkShow() {
                 <br />
                 Enjoy managing your social media effortlessly. <br />{" "}
                 <span className="text-xs sm:text-sm text-[#f3a775]">
-                  Stay Connected, Stay Engaged!..
+                  <ReactTyped
+                    strings={[" Stay Connected, Stay Engaged!.."]}
+                    typeSpeed={120}
+                    backSpeed={50}
+                    loop
+                  />
                 </span>
               </p>
             </div>
-            <div className="mx-10 sm:mx-5 lg:mx-10">
+            <div className="mx-2 sm:mt-10 mt-5 sm:mx-5 lg:mx-10">
               <img src={linkShow} alt="" />
             </div>
           </div>
@@ -45,14 +64,14 @@ export default function GuestLinkShow() {
         <div className="sm:w-7/12 lg:w-6/12 sm:mx-8 mt-4 sm:mt-10 border-[#f4f2f2c9] bg-cover bg-center showlinkimage md:mx-5">
           <div className=" h-96 py-5 pl-5 bg-red-50 w-8/12 border">
             <div className="mb-3">
-              <h3 className=" text-sm text-slate-600">
+              <h3 className=" text-base text-slate-600">
                 {GuestUserData.username}
               </h3>
             </div>
 
             <div className="  overflow-y-scroll showalllink h-80">
-              <div className=" flex pb-5 gap-5 ">
-                <FaSquareFacebook className=" text-gray-400 hover:text-blue-500 size-6" />
+              <div className=" flex pb-5 gap-5">
+                <FaSquareFacebook className="text-blue-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -63,7 +82,7 @@ export default function GuestLinkShow() {
                 </div>
               </div>
               <div className=" flex pb-5 gap-5 ">
-                <IoLogoYoutube className=" text-gray-400 hover:text-red-500 size-6" />
+                <IoLogoYoutube className=" text-red-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -74,7 +93,7 @@ export default function GuestLinkShow() {
                 </div>
               </div>
               <div className=" flex pb-5 gap-5 ">
-                <IoLogoTiktok className=" text-gray-400 hover:text-red-500 size-6" />
+                <IoLogoTiktok className=" text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -86,7 +105,7 @@ export default function GuestLinkShow() {
               </div>
 
               <div className=" flex pb-5 gap-5 ">
-                <FaInstagram className=" text-gray-400 hover:text-[#f86769] size-6" />
+                <FaInstagram className=" text-[#f86769] size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -98,7 +117,7 @@ export default function GuestLinkShow() {
               </div>
 
               <div className=" flex pb-5 gap-5 ">
-                <FaSnapchatSquare className=" hover:text-yellow-300 text-gray-400 size-6" />
+                <FaSnapchatSquare className=" text-yellow-300 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -110,7 +129,7 @@ export default function GuestLinkShow() {
               </div>
 
               <div className=" flex pb-5 gap-5 ">
-                <RiTwitterXLine className=" text-gray-400 hover:text-black size-6" />
+                <RiTwitterXLine className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -122,7 +141,7 @@ export default function GuestLinkShow() {
               </div>
 
               <div className=" flex pb-5 gap-5 ">
-                <FaPinterestP className=" text-gray-400 hover:text-red-500 size-6" />
+                <FaPinterestP className=" text-red-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}
@@ -134,7 +153,7 @@ export default function GuestLinkShow() {
               </div>
 
               <div className=" flex pb-5 gap-5 ">
-                <TbBrandTinder className=" text-gray-400 hover:text-pink-600 size-6" />
+                <TbBrandTinder className="  text-pink-600 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     -{" "}

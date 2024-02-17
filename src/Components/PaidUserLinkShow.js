@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
+import { ReactTyped } from "react-typed";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import linkShow from "../image/linkShow.png";
@@ -29,6 +30,16 @@ export default function PaidUserLinkShow() {
   const location = useLocation();
   const receivedData = location.state;
   let PaidUserData = receivedData.fetchedPaidUserData;
+  const [isMounted, setIsMounted] = useState(false);
+  let timeoutId = null;
+
+  useEffect(() => {
+    timeoutId = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const renderSocialMedia = (socialMediaName) => {
     const socialMediaData = PaidUserData.socialMedia[socialMediaName];
@@ -53,17 +64,29 @@ export default function PaidUserLinkShow() {
   return (
     <>
       <NavBar />
-      <div className="font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 ">
-        <div className="sm:w-5/12 sm:ml-10 flex justify-center items-end mb-5 ">
+      <div className={` ${
+          isMounted ? "slide-in" : ""
+        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[80px] mb-10 mx-4 sm:w-11/12 lg:w-4/5 `}>
+        <div className="sm:w-5/12 w-11/12 mx-auto sm:ml-1  flex justify-center items-end mb-5 ">
           <div className=" ">
             <div className="mr-5 sm:mx-5">
               <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
                 <span className="text-[#00ffca] text-2xl sm:text-3xl md:text-4xl">
-                  Stay Connected, Stay Engaged!..
+                  Thank you for choosing Linkhub!.
+                </span>
+                <br />
+                Enjoy managing your social media effortlessly. <br />{" "}
+                <span className="text-xs sm:text-sm text-[#f3a775]">
+                  <ReactTyped
+                    strings={[" Stay Connected, Stay Engaged!.."]}
+                    typeSpeed={120}
+                    backSpeed={50}
+                    loop
+                  />
                 </span>
               </p>
             </div>
-            <div className="mx-10 sm:mx-5 lg:mx-10">
+            <div className="mx-10 mt-2 sm:mt-10 sm:mx-5 lg:mx-10">
               <img src={linkShow} alt="" />
             </div>
           </div>
@@ -72,46 +95,46 @@ export default function PaidUserLinkShow() {
         <div className="sm:w-7/12 lg:w-6/12 sm:mx-8 mt-4 sm:mt-10 border-[#f4f2f2c9] bg-cover bg-center showlinkimage md:mx-5">
           <div className=" h-96 py-5 pl-5 bg-green-50 w-8/12 border">
             <div className="mb-3">
-              <h3 className=" text-sm text-slate-600">
+              <h3 className=" text-lg text-slate-600">
                 {PaidUserData.username}
               </h3>
             </div>
 
             <div className="  overflow-y-scroll showalllink h-80">
-              <div className=" flex pb-5 gap-5 ">
-                <FaWhatsapp className=" text-gray-400 hover:text-green-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaWhatsapp className=" text-green-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("whatsapp")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaSquareFacebook className=" text-gray-400 hover:text-blue-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaSquareFacebook className="  text-blue-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("facebook")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <IoLogoYoutube className=" text-gray-400 hover:text-red-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <IoLogoYoutube className="  text-red-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("youtube")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <MdAlternateEmail className=" text-gray-400 hover:text-red-800 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <MdAlternateEmail className="  text-red-800 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("email")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <CiLinkedin className=" text-gray-400 hover:text-blue-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <CiLinkedin className="  text-blue-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("linkedin")}
@@ -119,32 +142,32 @@ export default function PaidUserLinkShow() {
                 </div>
               </div>
 
-              <div className=" flex pb-5 gap-5 ">
-                <FaInstagram className=" text-gray-400 hover:text-pink-600 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaInstagram className="  text-pink-600 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("instagram")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaTelegramPlane className=" text-gray-400 hover:text-blue-400 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaTelegramPlane className="  text-blue-400 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("telegram")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaSnapchatSquare className=" text-gray-400 hover:text-yellow-300 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaSnapchatSquare className="  text-yellow-300 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("snapchat")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <IoLogoTiktok className=" text-gray-400 hover:text-black size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <IoLogoTiktok className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("tiktok")}
@@ -152,96 +175,96 @@ export default function PaidUserLinkShow() {
                 </div>
               </div>
 
-              <div className=" flex pb-5 gap-5 ">
-                <TbBrandFiverr className=" text-gray-400 hover:text-black size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <TbBrandFiverr className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("fiverr")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaRedditAlien className=" text-gray-400 hover:text-red-400 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaRedditAlien className="  text-red-400 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("reddit")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <RiTwitterXLine className=" text-gray-400 hover:text-black size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <RiTwitterXLine className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("x")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaThreads className=" text-gray-400 hover:text-black size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaThreads className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("threads")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaFlickr className=" text-gray-400 hover:text-slate-200  size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaFlickr className="  text-slate-400  size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("flickr")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaGithub className=" text-gray-400 hover:text-black size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaGithub className="  text-black size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("github")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaPinterestP className=" text-gray-400 hover:text-red-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaPinterestP className="  text-red-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("pinterest")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaMeetup className=" text-gray-400 hover:text-red-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaMeetup className="  text-red-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("meetup")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <BsSinaWeibo className=" text-gray-400 hover:text-red-800 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <BsSinaWeibo className="  text-red-800 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("sinaWeibo")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <TbBrandTinder className=" text-gray-400 hover:text-pink-600 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <TbBrandTinder className="  text-pink-600 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("tinder")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <FaTumblrSquare className=" text-gray-400 hover:text-blue-500 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <FaTumblrSquare className="  text-blue-500 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("tumblr")}
                   </h6>
                 </div>
               </div>
-              <div className=" flex pb-5 gap-5 ">
-                <IoLogoXing className=" text-gray-400 hover:text-cyan-800 size-6" />
+              <div className=" flex pb-5 gap-5   ">
+                <IoLogoXing className="  text-cyan-800 size-6" />
                 <div className="    items-end">
                   <h6 className=" text-xs text-slate-400">
                     - {renderSocialMedia("xing")}

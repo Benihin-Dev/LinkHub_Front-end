@@ -8,11 +8,11 @@ export default function Plans() {
   return (
     <div
       id="plans"
-      className="font-Sriracha sm:h-60 md:h-[280px] lg:h-72 mb-24 sm:flex mx-3 border border-[#00ffcc35] bg-[#cefff520] w-full sm:w-11/12 lg:w-4/5 sm:mx-auto mt-20"
+      className="font-Sriracha sm:h-60 md:h-[280px] lg:h-72 mb-24 sm:flex mx-3 border border-[#55ceb6] bg-[#cefff553] w-full sm:w-11/12 lg:w-4/5 sm:mx-auto mt-20"
     >
-      <div className=" sm:w-5/12 p-6 text-xs  w-10/12 mx-auto md:text-sm lg:text-base lg:p-8 leading-3 flex  items-end">
-        <p className="text-slate-600">
-          <span className=" text-3xl text-[#00ffca]">PLANS </span>
+      <div className=" sm:w-5/12 p-6 text-sm  w-10/12 mx-auto md:text-sm lg:text-base lg:p-8 leading-4 flex  items-end">
+        <p className="text-slate-600 ">
+          <span className=" text-4xl text-[#00ffca]">PLANS </span>
           <br />
           Selecting your plan is a declaration of self-worth and a promise to
           invest in your own growth. Embrace the journey ahead you're on the
@@ -20,11 +20,11 @@ export default function Plans() {
         </p>
       </div>
       <div className="sm:w-7/12 sm:flex mx-6 sm:mx-10 sm:mb-1 lg:mx-16 gap-10 lg:gap-10">
-        <div className="bg-[#ffffffd2] border  w-2/3 mx-auto border-green-100 rounded-sm  sm:w-1/2 sm:my-6 md:my-10 mb-6 sm:mb-0">
-          <h1 className=" mt-3 text-center mx-3 border-b border-green-200 pb-2">
+        <div className="bg-[#ffffffd2] border  w-2/4 mx-auto border-gray-500 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
+          <h1 className=" mt-3 text-center mx-3 border-b border-green-300 pb-2">
             BASIC
           </h1>
-          <div className=" my-5 mx-2 md:mx-4 h-32  lg:mx-8 text-xs md:text-sm">
+          <div className=" mt-3 sm:my-3 mx-2 md:mx-1  lg:mx-5 text-sm">
             <ul>
               <div className="flex justify-between">
                 <li>Limited links</li>
@@ -35,7 +35,7 @@ export default function Plans() {
                 <img src={checkmarkf2} alt="" className="h-5" />
               </div>
             </ul>
-            <div className="flex mx-auto justify-center mt-9 w-full ">
+            <div className="flex mx-auto justify-center mt-3 md:mt-6 w-full ">
               <NavLink to="/guest">
                 <button className="border rounded-full border-blue-500 hover:bg-blue-500 hover:text-white text-slate-500 px-4 md:px-2 mb-3 sm:mb-0 lg:px-3 py-1">
                   Get it Free
@@ -44,11 +44,11 @@ export default function Plans() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ffffffd2] w-2/3 mx-auto border border-green-100 rounded-sm   sm:w-1/2 sm:my-6 md:my-10 mb-6 sm:mb-0">
-          <h1 className=" mt-3 text-center  mx-3 border-b border-green-200 pb-2">
+        <div className="bg-[#ffffffd2] w-1/2 mx-auto border border-gray-500 rounded-md shadow-lg hover:shadow-2xl  md:w-2/5 sm:my-6 md:my-10 mb-6 sm:mb-0">
+          <h1 className=" mt-3 text-center  mx-3 border-b border-green-300 pb-2">
             STANDART
           </h1>
-          <div className=" my-5 mx-2 md:mx-4 lg:mx-8 text-xs md:text-sm">
+          <div className=" mt-3 sm:my-3 mx-2  lg:mx-5 text-sm ">
             <ul>
               <div className="flex justify-between">
                 <li>Unlimited links</li>

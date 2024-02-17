@@ -8,7 +8,7 @@ import { TbBrandFiverr } from "react-icons/tb";
 
 export default function Footer() {
   return (
-    <div className=" border-t border-[#84848448] mb-2 sm:flex mx-auto justify-between w-full sm:w-11/12 lg:w-4/5 h-10 sm:px-5">
+    <div className=" border-t border-[#84848448] mb-5 sm:mb-2 sm:flex mx-auto justify-between w-full sm:w-11/12 lg:w-4/5 h-10 sm:px-5">
       <div className="sm:flex gap-5">
         <img
           src={titleImg}

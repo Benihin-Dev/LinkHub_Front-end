@@ -4,13 +4,16 @@ import searchImg from "../image/search.png";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ReactTyped } from "react-typed";
 
 export default function Main() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const [searchBoxBorder, setsearchBoxBorder] = useState("border-[#00ffca]");
-  const [inputBoxOutline, setInputBoxOutline] = useState("border-[#00ffca]");
+  const [inputBoxOutline, setInputBoxOutline] = useState(
+    "border-[#71d8c4] shadow-lg"
+  );
   const [inputBoxPlaceholder, setinputBoxPlaceholder] =
     useState("Enter ID . .");
   const [invalidInputMessage, setInvalidInputMessage] = useState("");
@@ -26,14 +29,14 @@ export default function Main() {
   };
 
   const setInvalidInput = () => {
-    setInputBoxOutline("border-red-300 shadow shadow-red-200");
+    setInputBoxOutline("border-red-300 shadow-md shadow-red-200");
     setinputBoxPlaceholder("Please check the UserId..");
     setsearchBoxBorder("border-red-300");
-    setInvalidInputMessage("Invalid UserId!..");
+    setInvalidInputMessage("Invalid UserId!....");
   };
 
   const alertMessageForEmptySearch = () => {
-    setInputBoxOutline("border-[#eaf24e] shadow shadow-yellow-100");
+    setInputBoxOutline("border-[#eaf24e] shadow-lg shadow-yellow-100");
     setinputBoxPlaceholder("Please enter UserId!..");
     setsearchBoxBorder("border-[#eaf24e]");
     setInvalidInputMessage("");
@@ -96,8 +99,8 @@ export default function Main() {
       className="pt-1 sm:pt-20  md:pt-44 w-11/12 lg:w-4/5 mx-auto md:gap-10 block sm:flex"
     >
       <div className=" w-full sm:w-1/2 px-2 sm:px-5">
-        <p className="font-Sriracha mt-16 md:mt-24 lg:mt-20 text-[12px] sm:text-[14px] leading-4 xl:mt-32 text-[#088395]">
-          <span className="text-xl md:text-3xl lg:text-4xl   text-[#00ffca]">
+        <p className="font-Sriracha mt-16 md:mt-24 lg:mt-20 text-[14px] sm:text-[14px] leading-4 xl:mt-32 text-[#088395]">
+          <span className="text-2xl md:text-3xl lg:text-4xl   text-[#64efd3]">
             Unify Everything. <br />
             In a Single, Seamless Link.
           </span>
@@ -106,9 +109,10 @@ export default function Main() {
           More..
         </p>
         <NavLink to="/account-selection">
-          <button className="mt-1 font-Sriracha text-sm rounded-full border py-1 px-6 hover:bg-[#f89959] hover:text-white  border-[#f89959] text-[#f89959]">
+          <button className="mt-1 font-Sriracha text-base rounded-full border py-1 px-6 hover:bg-[#f89959] hover:text-white  border-[#f89959] text-[#f89959]">
             Connect your Dots
-          </button>
+          </button>{" "}
+          <br />
         </NavLink>
       </div>
       <div className="sm:w-1/2  items-center justify-center ">
@@ -119,7 +123,7 @@ export default function Main() {
         />
 
         <div
-          className={` relative flex font-Sriracha rounded-full overflow-hidden border mt-1  mx-auto sm:w-10/12 ${inputBoxOutline}`}
+          className={` relative flex font-Sriracha rounded-full overflow-hidden border mt-1 mx-auto sm:w-10/12 ${inputBoxOutline}`}
         >
           <form
             action="#"
@@ -138,7 +142,7 @@ export default function Main() {
             />
           </form>
           <div
-            className={` absolute bottom-2 right-16 lg:right-20 size-5  sm:size-6 ${
+            className={` absolute bottom-2 right-[70px] z-10 sm:right-16 lg:right-20 size-5  sm:size-6 ${
               loading === true ? "flex" : "hidden"
             } items-center`}
           >
@@ -155,7 +159,7 @@ export default function Main() {
             <img src={searchImg} alt="" className="h-6 my-2 mx-auto" />
           </div>
         </div>
-        <h1 className="text-center font-Sriracha text-red-500 text-xs">
+        <h1 className="text-end px-2 sm:px-10 lg:px-14 font-Sriracha text-red-400 text-xs">
           {invalidInputMessage}
         </h1>
       </div>

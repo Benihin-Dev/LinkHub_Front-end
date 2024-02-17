@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className=" flex justify-between py-2 w-full bg-[#ffffffd2] right-0 left-0 px-3 sm:px-10 md:px-2 fixed  sm:pt-4 md:w-11/12 lg:w-4/5 mx-auto">
+    <div
+      className={` z-10 flex justify-between pt-4 pb-1 w-11/12 bg-[#ffffffd2] right-0 left-0 px-3 sm:px-10 md:px-2 fixed  sm:pt-4 md:w-11/12 lg:w-4/5 mx-auto`}
+    >
       <div>
         <img src={NavBarImg} alt="NavImage" className=" h-8" />
       </div>
