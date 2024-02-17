@@ -138,7 +138,6 @@ export default function Main() {
               placeholder={inputBoxPlaceholder}
               onChange={handleChange}
               onKeyPress={handleKeyPress}
-              autoFocus
             />
           </form>
           <div
