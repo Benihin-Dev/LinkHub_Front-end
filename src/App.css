@@ -1,0 +1,153 @@
+.bgimage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./4b.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  z-index: -2;
+  opacity: 1;
+}
+
+.heroimg {
+  object-fit: cover;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00ffca3e;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+.danceAnimation {
+  &:hover {
+    animation: rotate 500ms ease-in-out 1 alternate;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 5deg;
+  }
+
+  50% {
+    rotate: -5deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.showalllink::-webkit-scrollbar {
+  width: 6px;
+}
+
+.showalllink::-webkit-scrollbar-thumb {
+  background-color: #929292;
+  border-radius: 5px;
+}
+
+.showalllink::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+.showlinkimage {
+  background-image: url("./BGshow.png");
+}
+
+.loading {
+  animation: loadingAnimation 400ms linear infinite;
+}
+
+@keyframes loadingAnimation {
+  0%,
+  100% {
+    border-bottom: 3px dashed rgb(234, 227, 227);
+    border-left: 3px dashed rgb(132, 131, 131);
+    border-top: 3px dashed rgb(234, 227, 227);
+    border-right: 3px dashed rgb(234, 227, 227);
+  }
+  25% {
+    border-bottom: 3px dashed rgb(234, 227, 227);
+    border-left: 3px dashed rgb(234, 227, 227);
+    border-top: 3px dashed rgb(132, 131, 131);
+    border-right: 3px dashed rgb(234, 227, 227);
+  }
+  50% {
+    border-bottom: 3px dashed rgb(234, 227, 227);
+    border-left: 3px dashed rgb(234, 227, 227);
+    border-top: 3px dashed rgb(234, 227, 227);
+    border-right: 3px dashed rgb(132, 131, 131);
+  }
+  75% {
+    border-bottom: 3px dashed rgb(132, 131, 131);
+    border-left: 3px dashed rgb(234, 227, 227);
+    border-top: 3px dashed rgb(234, 227, 227);
+    border-right: 3px dashed rgb(234, 227, 227);
+  }
+}
+
+.innerBox:nth-child(1) {
+  animation: resizer1 800ms ease-in-out infinite;
+}
+
+.innerBox:nth-child(5) {
+  animation: resizer1 800ms ease-in-out infinite;
+}
+
+.innerBox:nth-child(2) {
+  animation: resizer2 800ms ease-in-out infinite;
+}
+
+.innerBox:nth-child(4) {
+  animation: resizer2 800ms ease-in-out infinite;
+}
+.innerBox:nth-child(3) {
+  animation: resizer3 800ms ease-in-out infinite;
+}
+
+@keyframes resizer3 {
+  0%,
+  100% {
+    height: 60%;
+  }
+
+  50% {
+    height: 40%;
+  }
+}
+
+@keyframes resizer2 {
+  0%,
+  100% {
+    height: 50%;
+  }
+
+  50% {
+    height: 70%;
+  }
+}
+
+@keyframes resizer1 {
+  0%,
+  100% {
+    height: 30%;
+  }
+
+  50% {
+    height: 90%;
+  }
+}

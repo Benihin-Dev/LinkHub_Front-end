@@ -1,0 +1,220 @@
+.linkshow_block {
+  /* background-color: rgba(70, 70, 70, 0.207);
+     */
+  border-radius: 02px;
+  height: 350px !important;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #fefefe1a;
+  border-inline: 1px solid rgba(141, 196, 183, 0.232);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.linkshow {
+  border-radius: 6px;
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  padding-block: 0px;
+  padding-left: 5px;
+  border: 1px solid rgba(198, 194, 194, 0.19);
+  &:hover {
+    transform: scale(1);
+    background-color: #ffffffd4;
+  }
+
+  /* border: 2px solid rgb(47, 255, 109); */
+}
+
+.linkshow > p {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.ti {
+  line-height: 15px;
+  color: #000000;
+  font-size: 18px;
+}
+
+.ti span {
+  color: #000000;
+}
+
+.show_social_link {
+  width: 100%;
+  border-radius: 6px;
+  padding: 8px 15px 2px 20px;
+  outline: none;
+  transition: 400ms;
+  align-items: center;
+  font-size: 12px;
+
+  &:focus {
+    width: 100%;
+    border-width: px;
+  }
+}
+
+.social_image {
+  padding: 2px;
+}
+
+.save_link {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.save_link_btn {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #00000024;
+  background-color: #00ffcc61;
+  &:hover {
+    color: #000000;
+    background-color: #00ffcc;
+
+    /* background-color: #00ffccd1; */
+  }
+}
+
+.facebook_colour {
+  background-color: rgba(174, 220, 251, 0.125);
+  border: 0.5mm solid rgb(10, 53, 208, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.youtube_colour {
+  background-color: rgba(251, 195, 189, 0.1);
+  border: 0.5mm solid rgb(208, 10, 10, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.instragram_colour {
+  background-color: rgba(234, 95, 255, 0.1);
+  border: 0.5mm solid rgb(175, 10, 208, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.snapchat_colour {
+  background-color: rgba(252, 255, 67, 0.1);
+  border: 0.5mm solid rgb(251, 255, 7, 0.3);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.tiktok_colour {
+  background-color: rgba(255, 63, 197, 0.1);
+  border: 0.5mm solid rgb(43, 43, 45, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.x_colour {
+  background-color: rgba(183, 183, 185, 0.1);
+  border: 0.5mm solid rgb(43, 43, 45, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.pinterest_colour {
+  background-color: rgba(255, 45, 45, 0.1);
+  border: 0.5mm solid rgb(208, 10, 10, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.tinder_colour {
+  background-color: rgba(253, 92, 253, 0.1);
+  border: 0.5mm solid rgba(123, 6, 103, 0.2);
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.642);
+  }
+}
+
+.guestname {
+  margin: 0px 25px 10px 25px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    background-color: #ffffffac;
+  }
+}
+
+.guestpic {
+  background-color: rgba(111, 112, 112, 0);
+
+  padding: 3px;
+}
+
+.gues-tname {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  padding: 2px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.linkshow_block::-webkit-scrollbar {
+  width: 0px;
+}
