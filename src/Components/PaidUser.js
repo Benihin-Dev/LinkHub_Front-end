@@ -544,7 +544,9 @@ export default function PaidUser() {
           </div>
 
           <div className="sm:w-5/12 sm:ml-10 flex justify-center items-end mb-5 ">
-            <div className=" ">
+            <div
+              className={` sm:mt-0 ${accountState === true ? "mt-32" : "mt-0"}`}
+            >
               <div className="mr-5 mx-10 sm:mx-5">
                 <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
                   <span className="text-[#00ffca] text-2xl sm:text-3xl md:text-4xl">
@@ -563,7 +565,13 @@ export default function PaidUser() {
             </div>
           </div>
         </div>
-        <Footer />
+        <div
+          className={`${
+            accountState === true ? "fixed" : ""
+          } bottom-0 right-0 left-0 sm:mt-16`}
+        >
+          <Footer />
+        </div>
       </>
     );
   } else {
@@ -905,8 +913,14 @@ export default function PaidUser() {
             )}
           </div>
 
-          <div className="sm:w-5/12 mt-40 sm:ml-10 mx-auto w-10/12 flex justify-center items-end mb-5 ">
-            <div className=" ">
+          <div
+            className={` ${
+              accountState === true ? "mt-10" : "mt-10 "
+            }sm:w-5/12  sm:ml-10 mx-auto w-10/12 flex justify-center items-end mb-5 `}
+          >
+            <div
+              className={` sm:mt-0 ${accountState === true ? "mt-32" : "mt-0"}`}
+            >
               <div className="mr-5 sm:mx-5">
                 <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
                   <span className="text-[#00ffca] text-2xl sm:text-3xl md:text-4xl">
@@ -919,13 +933,17 @@ export default function PaidUser() {
                   </span>
                 </p>
               </div>
-              <div className="mx-10 mt-5 sm:mx-5 lg:mx-10">
+              <div className="mx-10 sm:mt-10 sm:mx-5 lg:mx-10">
                 <img src={guestImg} alt="" />
               </div>
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 right-0 left-0 sm:mt-16">
+        <div
+          className={`${
+            accountState === true ? "fixed" : ""
+          } bottom-0 right-0 left-0 sm:mt-16`}
+        >
           <Footer />
         </div>
       </>
