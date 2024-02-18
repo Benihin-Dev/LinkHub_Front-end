@@ -29,7 +29,7 @@ export default function HomeNavBar() {
       {menu && (
         <div
           onClick={changemenu}
-          className=" md:hidden fixed text-center justify-center px-4 sm:px-10 flex mx-auto top-10 bg-[#f9f6f2db] pb-3 w-full right-0"
+          className=" md:hidden fixed text-center justify-center px-4 sm:px-10 flex mx-auto top-10 bg-[#ffffffeb] border-b-2 border-l-2 border-r-2 pb-4 w-full right-0"
         >
           <ul className="font-Sriracha flex-col ">
             <li

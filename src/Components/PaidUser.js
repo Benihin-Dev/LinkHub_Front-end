@@ -905,7 +905,7 @@ export default function PaidUser() {
             )}
           </div>
 
-          <div className="sm:w-5/12 sm:ml-10 mx-auto w-10/12 flex justify-center items-end mb-5 ">
+          <div className="sm:w-5/12 mt-40 sm:ml-10 mx-auto w-10/12 flex justify-center items-end mb-5 ">
             <div className=" ">
               <div className="mr-5 sm:mx-5">
                 <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
@@ -919,7 +919,7 @@ export default function PaidUser() {
                   </span>
                 </p>
               </div>
-              <div className="mx-10 sm:mx-5 lg:mx-10">
+              <div className="mx-10 mt-5 sm:mx-5 lg:mx-10">
                 <img src={guestImg} alt="" />
               </div>
             </div>

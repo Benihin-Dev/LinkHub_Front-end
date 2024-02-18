@@ -234,11 +234,11 @@ export default function AccountCreate() {
             </div>
           </form>
         </div>
-        <div className="sm:hidden w-6/12 mx-auto mb-0 mt-0 sm:mt-0 lg:mt-0">
+        <div className="sm:hidden  w-6/12 mx-auto mb-0 mt-16 sm:mt-0 lg:mt-0">
           <img src={contactImg} alt="" />
         </div>
       </div>
-      <footer className=" sm:fixed bottom-0 sm:bottom-0 right-0 left-0">
+      <footer className=" fixed bottom-0 sm:bottom-0 right-0 left-0">
         <Footer />
       </footer>
     </>

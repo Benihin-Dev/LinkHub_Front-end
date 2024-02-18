@@ -90,7 +90,7 @@ export default function Guest() {
       <div
         className={`${
           isMounted ? "slide-in" : ""
-        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[25px] mx-4 sm:w-11/12 lg:w-4/5 `}
+        } opacity-0 font-Sriracha sm:flex sm:mx-auto pt-[25px] mx-4 sm:w-11/12 lg:w-3/5 `}
       >
         <div className="sm:w-7/12 mt-4 sm:mt-10">
           {accountState === true ? (
@@ -319,7 +319,7 @@ export default function Guest() {
           )}
         </div>
 
-        <div className="sm:w-5/12 mt-4 sm:ml-10 w-10/12 mx-auto lg:ml-20 sm:mt-10 mb-5 ">
+        <div className="sm:w-5/12 mt-40 sm:ml-10 w-10/12 mx-auto lg:ml-20 sm:mt-10 mb-5 ">
           <div className="mr-5 sm:mx-5">
             <p className="text-slate-500 text-xs sm:text-sm md:text-base leading-[14px]">
               <span className="text-[#00ffca] text-2xl sm:text-3xl md:text-4xl">
@@ -330,7 +330,7 @@ export default function Guest() {
               you need any assistance, we're here to help!.
             </p>
           </div>
-          <div className="mx-5 sm:mx-5">
+          <div className="mx-5  sm:mx-5">
             <img src={guestImg} alt="" />
           </div>
         </div>
