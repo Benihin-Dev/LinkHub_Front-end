@@ -102,7 +102,7 @@ export default function Guest() {
                 <div className="pt-3 pb-1 border rounded-md border-slate-300 shadow flex w-10/12 ">
                   <h1 className=" px-4  w-10/12">{formData.username}</h1>
                   <div
-                    className={`px-5 ${copyboardcolour}  flex justify-center items-center w-2/12`}
+                    className={` ${copyboardcolour}  flex justify-center items-center w-2/12`}
                     onClick={() => {
                       const linkToCopy = `${formData.username}`;
                       clipboardy
@@ -336,7 +336,11 @@ export default function Guest() {
         </div>
       </div>
 
-      <footer className=" mt-4">
+      <footer
+        className={` ${
+          accountState === true ? "fixed" : ""
+        } bottom-0 left-0 right-0 mt-4`}
+      >
         <Footer />
       </footer>
     </>

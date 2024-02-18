@@ -167,7 +167,7 @@ export default function PaidUser() {
                   <div className="pt-3 pb-1 border rounded-md border-slate-300 shadow flex w-10/12 ">
                     <h1 className=" px-4  w-10/12">{PaidUserData.username}</h1>
                     <div
-                      className={`px-5 ${copyboardcolour}  flex justify-center items-center w-2/12`}
+                      className={` ${copyboardcolour}  flex justify-center items-center w-2/12`}
                       onClick={() => {
                         const linkToCopy = `${PaidUserData.username}`;
                         clipboardy
@@ -587,7 +587,7 @@ export default function PaidUser() {
                   <div className="pt-3 pb-1 border rounded-md border-slate-300 shadow flex w-10/12 ">
                     <h1 className=" px-4  w-10/12">{PaidUserData.username}</h1>
                     <div
-                      className={`px-5 ${copyboardcolour}  flex justify-center items-center w-2/12`}
+                      className={` ${copyboardcolour}  flex justify-center items-center w-2/12`}
                       onClick={() => {
                         const linkToCopy = `${PaidUserData.username}`;
                         clipboardy
@@ -633,7 +633,7 @@ export default function PaidUser() {
                       <textarea
                         name="whatsapp"
                         type="text"
-                        className="social_link light_green"
+                        className="social_link resize-none  light_green"
                         placeholder="...."
                         required
                         onChange={handleChange}
@@ -646,7 +646,7 @@ export default function PaidUser() {
                         name="facebook"
                         type="text"
                         row={2}
-                        className="social_link blue"
+                        className="social_link  resize-none blue"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -658,7 +658,7 @@ export default function PaidUser() {
                         name="youtube"
                         type="text"
                         row={2}
-                        className="social_link red"
+                        className="social_link  resize-none red"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -670,7 +670,7 @@ export default function PaidUser() {
                         name="email"
                         type="text"
                         row={2}
-                        className="social_link orange"
+                        className="social_link  resize-none orange"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -682,7 +682,7 @@ export default function PaidUser() {
                         name="linkedin"
                         type="text"
                         row={2}
-                        className="social_link light_blue"
+                        className="social_link  resize-none light_blue"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -694,7 +694,7 @@ export default function PaidUser() {
                         name="instagram"
                         type="text"
                         row={2}
-                        className="social_link pink"
+                        className="social_link  resize-none pink"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -706,7 +706,7 @@ export default function PaidUser() {
                         name="telegram"
                         type="text"
                         row={2}
-                        className="social_link light_blue"
+                        className="social_link  resize-none light_blue"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -718,7 +718,7 @@ export default function PaidUser() {
                         name="snapchat"
                         type="text"
                         row={2}
-                        className="social_link yellow"
+                        className="social_link  resize-none yellow"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -730,7 +730,7 @@ export default function PaidUser() {
                         name="tiktok"
                         type="text"
                         row={2}
-                        className="social_link black"
+                        className="social_link  resize-none black"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -742,7 +742,7 @@ export default function PaidUser() {
                         name="reddit"
                         type="text"
                         row={2}
-                        className="social_link red"
+                        className="social_link  resize-none red"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -754,7 +754,7 @@ export default function PaidUser() {
                         name="x"
                         type="text"
                         row={2}
-                        className="social_link purple"
+                        className="social_link  resize-none purple"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -766,7 +766,7 @@ export default function PaidUser() {
                         name="threads"
                         type="text"
                         row={2}
-                        className="social_link black"
+                        className="social_link  resize-none black"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -779,7 +779,7 @@ export default function PaidUser() {
                         name="flickr"
                         type="text"
                         row={2}
-                        className="social_link pink"
+                        className="social_link  resize-none pink"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -792,7 +792,7 @@ export default function PaidUser() {
                         name="github"
                         type="text"
                         row={2}
-                        className="social_link yellow "
+                        className="social_link  resize-none yellow "
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -804,7 +804,7 @@ export default function PaidUser() {
                         name="pinterest"
                         type="text"
                         row={2}
-                        className="social_link light_blue"
+                        className="social_link  resize-none light_blue"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -816,7 +816,7 @@ export default function PaidUser() {
                         name="meetup"
                         type="text"
                         row={2}
-                        className="social_link light_green"
+                        className="social_link  resize-none light_green"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -829,7 +829,7 @@ export default function PaidUser() {
                         name="sinaWeibo"
                         type="text"
                         row={2}
-                        className="social_link green"
+                        className="social_link  resize-none green"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -841,7 +841,7 @@ export default function PaidUser() {
                         name="fiverr"
                         type="text"
                         row={2}
-                        className="social_link purple"
+                        className="social_link  resize-none purple"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -853,7 +853,7 @@ export default function PaidUser() {
                         name="tinder"
                         type="text"
                         row={2}
-                        className="social_link light_blue"
+                        className="social_link  resize-none light_blue"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -865,7 +865,7 @@ export default function PaidUser() {
                         name="tumblr"
                         type="text"
                         row={2}
-                        className="social_link pink"
+                        className="social_link  resize-none pink"
                         placeholder="...."
                         onChange={handleChange}
                       />
@@ -878,7 +878,7 @@ export default function PaidUser() {
                         name="xing"
                         type="text"
                         row={2}
-                        className="social_link light_green"
+                        className="social_link  resize-none light_green"
                         placeholder="..."
                         onChange={handleChange}
                       />
@@ -925,7 +925,7 @@ export default function PaidUser() {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 right-0 left-0 sm:relative sm:mt-16">
+        <div className="fixed bottom-0 right-0 left-0 sm:mt-16">
           <Footer />
         </div>
       </>

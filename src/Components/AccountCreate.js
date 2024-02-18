@@ -112,7 +112,7 @@ export default function AccountCreate() {
             <span className="text-sm text-[#f3a775]">Almost there!</span>
           </p>
         </div>
-        <div className="sm:w-7/12 w-10/12 mx-auto mb-20 mt-16 sm:mt-0 lg:mt-0">
+        <div className="sm:w-7/12 w-10/12 mx-auto mb-1 sm:mb-20 mt-16 sm:mt-0 lg:mt-0">
           <form action="#" onSubmit={HandleSubmit} className=" relative">
             <div className={`${loading === true ? "blur" : "blur-none"}`}>
               <div className="mb-3 flex mx-auto w-10/12 sm:w-10/12  hover:border-[#4649486c] border-b border-[#27574d82]  overflow-hidden">
@@ -234,11 +234,11 @@ export default function AccountCreate() {
             </div>
           </form>
         </div>
-        <div className="sm:hidden w-6/12 mx-auto mb-20 mt-16 sm:mt-0 lg:mt-0">
+        <div className="sm:hidden w-6/12 mx-auto mb-0 mt-0 sm:mt-0 lg:mt-0">
           <img src={contactImg} alt="" />
         </div>
       </div>
-      <footer className=" fixed bottom-0 sm:bottom-0 right-0 left-0">
+      <footer className=" sm:fixed bottom-0 sm:bottom-0 right-0 left-0">
         <Footer />
       </footer>
     </>
